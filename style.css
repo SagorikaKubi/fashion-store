@@ -56,7 +56,8 @@ nav ul li a {
 }
 
 a:hover {
-  color: rgb(238, 182, 200);
+  /* color: rgb(238, 182, 200); */
+  color: #26c0ac;
   transition: 0.5s;
 }
 
