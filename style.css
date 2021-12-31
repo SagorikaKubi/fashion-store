@@ -106,6 +106,7 @@ input {
   display: none;
 }
 
+/****** media query ********/
 @media (max-width: 1010px) {
   nav {
     background-color: #4caaf7;
@@ -175,25 +176,14 @@ header button:hover {
   color: #fff;
 }
 
+/****** media query ********/
 @media (max-width: 953px) {
   .header-description {
     position: absolute;
     top: 200px;
     left: 40px;
     line-height: 40px;
-    color: #fff;
     font-size: 18px;
-    text-align: center;
-  }
-
-  button {
-    height: 40px;
-    width: 140px;
-    font-size: 14px;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fff;
-    margin: 20px 10px;
   }
 }
 
@@ -207,7 +197,6 @@ header button:hover {
   position: relative;
   height: 550px;
   width: 650px;
-  /* border: 1px solid red; */
   overflow: hidden;
 }
 
@@ -273,19 +262,22 @@ hr {
   text-align: center;
 }
 
+/****** media query ********/
 @media (max-width: 668px) {
   .second-section {
     display: block;
   }
-  .woman-zone {
-    position: relative;
+
+  .woman-zone,
+  .man-zone {
     height: 420px;
-    width: 402px;
-    border: 1px solid blue;
+    width: 100vw;
   }
+
   .zone-info {
     top: 90px;
   }
+
   .explore {
     height: 40px;
     width: 120px;
@@ -293,16 +285,10 @@ hr {
     letter-spacing: 0;
     padding: 5px;
   }
-  .man-zone {
-    position: relative;
-    height: 420px;
-    width: 402px;
-    border: 1px solid blue;
-  }
 }
 
 /* *************** THIRD SECTION ******************** */
-.trending {
+.section-introduction {
   text-align: center;
   height: 150px;
   width: 100%;
@@ -311,20 +297,20 @@ hr {
   margin: 10px 0;
 }
 
-.trending h1 {
+.section-introduction h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 22px;
   font-weight: 400;
 }
 
-.trending i {
+.section-introduction i {
   font-size: 30px;
   padding: 5px 0;
   color: #26c0ac;
 }
 
-.trending p {
+.section-introduction p {
   color: #26c0ac;
 }
 
@@ -348,7 +334,6 @@ hr {
 .product {
   height: 320px;
   margin: 20px;
-  /* border: 1px solid red; */
 }
 
 .product img {
@@ -369,6 +354,13 @@ hr {
   color: brown;
   cursor: pointer;
   font-weight: 600;
+}
+
+/****** media query ********/
+@media (max-width: 668px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ********* BRAND INTRODUCTION ***************** */
@@ -395,6 +387,21 @@ hr {
 
 .brand-describe p {
   margin-top: 25px;
+}
+
+/****** media query ********/
+@media (max-width: 668px) {
+  #brand-intro {
+    height: 250px;
+  }
+  .brand-describe {
+    left: 60px;
+    font-size: 20px;
+    top: 50px;
+  }
+  .brand-describe p {
+    margin-top: 18px;
+  }
 }
 
 /**************************** BLOGS  ******************************/
@@ -449,10 +456,17 @@ hr {
   color: #26c0ac;
 }
 
-/*************************************** FOOTER  ******************************/
-footer {
-  height: 150px;
+/****** media query ********/
+@media (max-width: 668px) {
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog button {
+    margin-right: 40px;
+    font-size: 16px;
+  }
 }
+/*************************************** FOOTER  ******************************/
 
 .footer-section {
   height: 100px;
@@ -470,13 +484,13 @@ footer img {
 
 .services li {
   display: inline-block;
-  margin-left: 20px;
 }
 
 .services li a {
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
+  margin-left: 20px;
 }
 
 .services li a:hover {
@@ -516,4 +530,28 @@ footer img {
 
 .copyright small {
   color: #fff;
+}
+
+/****** media query ********/
+@media (max-width: 668px) {
+  .footer-section {
+    height: 220px;
+    display: block;
+    background-color: #26c0ac;
+    padding: 10px 30px;
+    line-height: 50px;
+    position: relative;
+  }
+  .footer-logo,
+  .social-icons,
+  .services {
+    text-align: center;
+  }
+  .footer-logo {
+    margin-right: 0px;
+  }
+  .services li {
+    display: inline-block;
+    margin-left: 0px;
+  }
 }
